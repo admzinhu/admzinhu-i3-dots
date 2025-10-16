@@ -1,0 +1,74 @@
+exec_always --no-startup-id pulseaudio
+
+# Workspaces fixos
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+
+exec_always --no-startup-id setxkbmap br
+
+exec_always --no-startup-id ~/.local/bin/autotiling
+
+# Flameshot com PrintScreen
+bindsym Print exec --no-startup-id flameshot gui
+
+workspace $ws1 output LVDS1
+workspace $ws2 output LVDS1
+workspace $ws3 output LVDS1
+
+set $mod Control
+
+bindsym $mod+a exec alacritty
+
+bindsym $mod+d exec rofi -show drun -theme ~/.config/rofi/launchers/type-5/style-5.rasi
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+d exec ~/.config/rofi/powermenu/type-2/powermenu.sh
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
+
+gaps inner 5
+gaps outer 5
+
+font pango:Iosevka Nerd Font 11
+
+bindsym $mod+Shift+r restart
+
+new_window pixel 3
+new_float normal
+hide_edge_borders both
+
+new_window pixel 0
+new_float pixel 0
+
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+i move up
+bindsym $mod+Shift+l move right
+
+mode "resize" {
+    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym k resize grow width 10 px or 10 ppt
+    bindsym i resize grow height 10 px or 10 ppt
+    bindsym l resize shrink height 10 px or 10 ppt
+    bindsym Return mode "default"
+}
+bindsym $mod+r mode "resize"
+
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+i focus up
+bindsym $mod+l focus right
+
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+exec_always --no-startup-id feh --bg-scale ~/Wallpapers/mocha/bunnies-road.png
