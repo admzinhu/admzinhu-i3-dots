@@ -1,15 +1,13 @@
-exec_always --no-startup-id pulseaudio
-
-# Workspaces fixos
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
 
-exec_always --no-startup-id setxkbmap br
+# set your keyboard [optional] exec_always --no-startup-id setxkbmap br
 
+# install tiling script for i3 with pipx install autotiling
 exec_always --no-startup-id ~/.local/bin/autotiling
 
-# Flameshot com PrintScreen
+# flameshot
 bindsym Print exec --no-startup-id flameshot gui
 
 workspace $ws1 output LVDS1
@@ -20,15 +18,15 @@ set $mod Control
 
 bindsym $mod+a exec alacritty
 
-bindsym $mod+d exec rofi -show drun -theme ~/.config/rofi/launchers/type-5/style-5.rasi
+bindsym $mod+d exec rofi -show drun -theme ~/.config/rofi/launchers/type-5/style-5.rasi # if you got adi's repo
 bindsym $mod+Shift+q kill
-bindsym $mod+Shift+d exec ~/.config/rofi/powermenu/type-2/powermenu.sh
+bindsym $mod+Shift+d exec ~/.config/rofi/powermenu/type-2/powermenu.sh # if you got adi's repo
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
 gaps inner 5
 gaps outer 5
 
-font pango:Iosevka Nerd Font 11
+font pango:Iosevka Nerd Font 11 # install on Arch - ttf-iosevka-nerd
 
 bindsym $mod+Shift+r restart
 
@@ -71,4 +69,4 @@ bindsym $mod+Shift+5 move container to workspace 5
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-exec_always --no-startup-id feh --bg-scale ~/Wallpapers/mocha/bunnies-road.png
+exec_always --no-startup-id feh --bg-scale ~/Wallpapers/some wallpaper.png
