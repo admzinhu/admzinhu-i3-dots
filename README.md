@@ -28,4 +28,6 @@ https://github.com/Keyitdev/dotfiles?tab=readme-ov-file - polybar [not everythin
 
 https://github.com/catppuccin/alacritty - alacritty with catpuccin theme
 
+[special thanks] https://github.com/orangci/walls-catppuccin-mocha - some wallpapers to match with mocha theme :]
+
 Thanks for everyone who made those repos. I'm grateful for y'all.
