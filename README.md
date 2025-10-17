@@ -21,8 +21,11 @@ Ok, before you go to your terminal and type "git clone https://github.com/admzin
 <img width="1365" height="767" alt="i3rice2" src="https://github.com/user-attachments/assets/930eb3c7-19c9-4866-bd87-63dc14696e5d" />
 
 Original repositories that i grabbed some dots to make this beauty:
+
 https://github.com/adi1090x/rofi - rofi applets [i couldn't upload everything in my repo]
+
 https://github.com/Keyitdev/dotfiles?tab=readme-ov-file - polybar [not everything, only the Polybar]
+
 https://github.com/catppuccin/alacritty - alacritty with catpuccin theme
 
 Thanks for everyone who made those repos. I'm grateful for y'all.
